@@ -23,6 +23,7 @@ class CounterViewModelTest: ObservableObject {
 
         checkout.processPayment(using: creditCard, amount: 100.0)
         checkout.processPayment(using: paypal, amount: 50.0)
+        //test
     }
 }
 
