@@ -5,7 +5,7 @@ on:
     branches: [develop]
   pull_request:
     branches: [develop]
-  workflow_dispatch:  # Allows manual trigger
+  workflow_dispatch:
 
 jobs:
   test:
@@ -25,8 +25,8 @@ jobs:
       - name: 🧪 Run Unit Tests
         run: |
           xcodebuild test \
-            -project UnitTest.xcodeproj \  # <-- Change to your actual project file
-            -scheme UnitTest \             # <-- Change to your actual scheme
+            -project UnitTest.xcodeproj \
+            -scheme UnitTest \
             -sdk iphonesimulator \
             -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.0' \
             -resultBundlePath TestResults.xcresult
