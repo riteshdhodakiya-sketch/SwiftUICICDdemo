@@ -6,11 +6,11 @@
 //
 
 import Testing
+import XCTest
 
 struct UnitTestTests {
 
-    @Test func example() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+    @Test func testAlwaysFails() {
+        XCTAssertEqual(1, 2, "1 is not equal to 2 — this test fails.")
     }
-
 }
