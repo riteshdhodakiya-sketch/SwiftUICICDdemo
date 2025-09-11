@@ -19,17 +19,15 @@ jobs:
       - name: 🛠️ Set Xcode Version
         run: sudo xcode-select -s /Applications/Xcode_16.4.app
 
-      - name: Run tests
+      - name: 🔍 List project files (for debugging)
+        run: find . -name "*.xcodeproj" -or -name "*.xcworkspace"
+
+      - name: 🧪 Run Unit Tests
         run: |
           xcodebuild test \
-          -project UnitTest.xcodeproj \
-          -scheme UnitTest \
-          -sdk iphonesimulator \
-          -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.0'
+            -project UnitTest.xcodeproj \  # <-- Change to your actual project file
+            -scheme UnitTest \             # <-- Change to your actual scheme
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.0' \
+            -resultBundlePath TestResults.xcresult
 
-      - name: Upload test logs (on failure)
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-logs
-          path: ~/Library/Logs/scan
