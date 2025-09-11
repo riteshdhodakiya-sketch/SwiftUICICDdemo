@@ -28,7 +28,7 @@ jobs:
             -project UnitTest/UnitTest.xcodeproj \
             -scheme UnitTest \
             -sdk iphonesimulator \
-            -destination 'platform=macOS' \
+            -destination 'platform=My Mac' \
             -resultBundlePath TestResults.xcresult
 
       - name: 📤 Upload .xcresult if tests fail
