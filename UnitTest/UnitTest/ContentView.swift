@@ -12,12 +12,14 @@ struct ContentView: View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+                .foregroundStyle(.tint) // Lint error: Trailing whitespace here ⬅️
+                
+            Text("Hello, world!") // Lint error: Missing documentation for this public struct/function (if configured)
+        } // Lint error: Missing empty line before closing brace (depending on SwiftLint config)
+        .padding() // Lint error: Line length > 100 (if you add a long comment here)
     }
 }
+
 
 #Preview {
     ContentView()
