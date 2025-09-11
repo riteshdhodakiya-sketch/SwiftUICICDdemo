@@ -39,7 +39,4 @@ final class UnitTestUITests: XCTestCase {
         }
     }
     
-    func testIncorrectValuesFail() {
-        XCTAssertEqual(1, 2, "1 is not equal to 2 — this test fails.")
-    }
 }

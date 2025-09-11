@@ -22,6 +22,11 @@ jobs:
       - name: 🔍 List project files (for debugging)
         run: find . -name "*.xcodeproj" -or -name "*.xcworkspace"
 
+      - name: 🧹 Run SwiftLint
+        run: |
+          brew install swiftlint || echo "SwiftLint already installed"
+          swiftlint
+
       - name: 🧪 Run Unit Tests
         run: |
           xcodebuild test \
