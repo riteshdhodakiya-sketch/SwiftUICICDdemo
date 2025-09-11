@@ -1,14 +1,14 @@
 //
-//  SwiftUIDemoApp.swift
-//  SwiftUIDemo
+//  UnitTestApp.swift
+//  UnitTest
 //
-//  Created by Ritesh Dhodakia on 8/26/25.
+//  Created by Ritesh Dhodakia on 9/11/25.
 //
 
 import SwiftUI
 
 @main
-struct SwiftUIDemoApp: App {
+struct UnitTestApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
